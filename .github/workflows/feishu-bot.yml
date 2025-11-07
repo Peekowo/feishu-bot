@@ -18,9 +18,10 @@ jobs:
         with:
           python-version: '3.x'
           
+      - name: Install dependencies
+        run: pip install requests
+          
       - name: Send random message
         env:
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
-        run: |
-          pip install requests
-          python send_message.py
+        run: python send_message.py
