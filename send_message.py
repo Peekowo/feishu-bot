@@ -3,7 +3,7 @@ import random
 import os
 import json
 
-# 您的100条消息列表
+# 随机消息列表
 messages = [
     "我家门前有两份日报，一份是日报，另一份也是日报。",
     "日报是一袭华美的袍，爬满了蚤子。",
@@ -104,4 +104,5 @@ if __name__ == "__main__":
     success = send_to_feishu(random_message)
 
     exit(0 if success else 1)
+
 
